@@ -16,7 +16,8 @@ class Config:
         'storage',
         'memory',
         'cpu',
-        'static'
+        'static',
+        'file'
     ]
     HASSIO_DEPENDENT_SCREENS = [
         'Splash'
@@ -32,6 +33,8 @@ class Config:
         'graceful_exit_text': 'graceful_exit_text',
         'static_screen_text': 'static_screen_text',
         'static_screen_text_noscroll': 'static_screen_text_noscroll',
+        'file_Screen_path': 'file_Screen_path',
+        'file_screen_text_noscroll': 'file_screen_text_noscroll',
         'scroll_amplitude': 'scroll_amplitude',
         'datetime_format': 'datetime_format',
         'welcome_screen_text': 'welcome_screen_text',
@@ -226,6 +229,15 @@ class Config:
             if static_text:
                 screen.text = static_text
                 if self.get_option_value('static_screen_text_noscroll'):
+                    screen.noscroll = True
+            return screen
+        elif name == 'file':
+            duration = self.get_screen_duration(name)
+            screen = FileScreen(duration, self.display, self.utils, self)
+            text_file = self.get_option_value('file_Screen_path')
+            if text_file:
+                screen.text_file = text_file
+                if self.get_option_value('file_screen_text_noscroll'):
                     screen.noscroll = True
             return screen
         elif name in self.enabled_screens:

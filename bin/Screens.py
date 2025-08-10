@@ -413,6 +413,23 @@ class NetworkScreen(BaseScreen):
 
         self.render_with_defaults()
 
+class FileScreen(BaseScreen):
+    def render(self):
+        self.hint = 'File'
+
+        text = ""
+        if self.text_file:
+            try:
+                with open(self.text_file, 'r') as file:
+                    text = file.read()
+            except Exception as e:
+                text = "Error reading file: " + str(e)
+        else:
+            text = "No text file configured"
+        text_lines = text.splitlines()
+        self.display_text(text_lines)
+        self.render_with_defaults()
+
 class StorageScreen(BaseScreen):
     def render(self):
         self.hint = 'DSK'

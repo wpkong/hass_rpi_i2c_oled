@@ -9,32 +9,30 @@
     "Show_Icons": true,
     "Show_Hint": false,
     "Compact": true,
- 
     "Show_Welcome_Screen": true,
     "Welcome_Screen_Limit": 5,
     "Welcome_Screen_Duration": null,
     "Welcome_Screen_Text": "Welcome to {hostname}",
-    
+    "Show_File_Screen": false,
+    "File_Screen_Text_NoScroll": false,
+    "File_Screen_Path": "",
+    "File_Screen_Limit": null,
+    "File_Screen_Duration": null,
     "Show_Splash_Screen": false,
     "Splash_Screen_Limit": null,
     "Splash_Screen_Duration": null,
-    
     "Show_Memory_Screen": true,
     "Memory_Screen_Limit": null,
     "Memory_Screen_Duration": 10,
-
     "Show_Storage_Screen": true,
     "Storage_Screen_Limit": null,
     "Storage_Screen_Duration": 5,
-    
     "Show_Network_Screen": true,
     "Network_Screen_Limit": null,
     "Network_Screen_Duration": 5,
-    
     "Show_CPU_Screen": true,
     "CPU_Screen_Limit": null,
     "CPU_Screen_Duration": 5,
-
     "Show_Static_Screen": false,
     "Static_Screen_Limit": null,
     "Static_Screen_Duration": 5,
