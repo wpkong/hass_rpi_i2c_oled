@@ -414,6 +414,8 @@ class NetworkScreen(BaseScreen):
         self.render_with_defaults()
 
 class FileScreen(BaseScreen):
+    text_file = None
+
     def render(self):
         self.hint = 'File'
 

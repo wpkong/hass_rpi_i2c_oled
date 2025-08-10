@@ -33,7 +33,7 @@ class Config:
         'graceful_exit_text': 'graceful_exit_text',
         'static_screen_text': 'static_screen_text',
         'static_screen_text_noscroll': 'static_screen_text_noscroll',
-        'file_Screen_path': 'file_Screen_path',
+        'file_screen_path': 'file_screen_path',
         'file_screen_text_noscroll': 'file_screen_text_noscroll',
         'scroll_amplitude': 'scroll_amplitude',
         'datetime_format': 'datetime_format',
@@ -234,7 +234,7 @@ class Config:
         elif name == 'file':
             duration = self.get_screen_duration(name)
             screen = FileScreen(duration, self.display, self.utils, self)
-            text_file = self.get_option_value('file_Screen_path')
+            text_file = self.get_option_value('file_screen_path')
             if text_file:
                 screen.text_file = text_file
                 if self.get_option_value('file_screen_text_noscroll'):
